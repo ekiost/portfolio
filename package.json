@@ -30,7 +30,6 @@
     "lenis": "^1.0.45",
     "lucide-react": "^0.363.0",
     "next": "^14.2.12",
-    "next-safe-action": "^7.9.3",
     "next-themes": "^0.3.0",
     "next-transition-router": "^0.2.1",
     "react": "^18",
@@ -38,24 +37,18 @@
     "react-hook-form": "^7.52.2",
     "react-markdown": "^9.0.1",
     "sass": "^1.76.0",
-    "schema-dts": "^1.1.2",
-    "sharp": "^0.33.5",
     "sonner": "^1.5.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
-    "vaul": "^0.9.3",
-    "zod": "^3.23.8"
+    "vaul": "^0.9.3"
   },
   "devDependencies": {
     "@content-collections/core": "^0.7.2",
     "@content-collections/next": "^0.2.3",
-    "@fumadocs/content-collections": "^1.1.4",
-    "@types/node": "22.7.6",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.1.4",
-    "fumadocs-core": "^13.4.10",
     "lint-staged": "^15.2.10",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
