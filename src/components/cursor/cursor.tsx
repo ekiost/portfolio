@@ -1,23 +1,11 @@
 'use client';
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './style.module.scss';
-import {
-  motion,
-  useMotionValue,
-  useSpring,
-  MotionValue,
-  SpringOptions,
-  AnimationControls
-} from 'framer-motion';
+import { motion, MotionValue, SpringOptions, useMotionValue, useSpring } from 'framer-motion';
 
 interface MouseMoveEvent {
   clientX: number;
   clientY: number;
-}
-
-interface Distance {
-  x: number;
-  y: number;
 }
 
 export default function Cursor() {
@@ -101,13 +89,13 @@ export default function Cursor() {
       window.removeEventListener('mousedown', handleMouseDown);
       window.removeEventListener('mouseup', handleMouseUp);
     };
-  }, []);
+  });
 
   const template = ({
-    rotate,
-    scaleX,
-    scaleY
-  }: {
+                      rotate,
+                      scaleX,
+                      scaleY
+                    }: {
     rotate: number;
     scaleX: number;
     scaleY: number;

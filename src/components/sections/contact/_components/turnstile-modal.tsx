@@ -1,12 +1,9 @@
-import { Button } from '@/components/ui/button';
 import {
   Credenza as Dialog,
   CredenzaContent as DialogContent,
   CredenzaDescription as DialogDescription,
-  CredenzaFooter as DialogFooter,
   CredenzaHeader as DialogHeader,
-  CredenzaTitle as DialogTitle,
-  CredenzaTrigger as DialogTrigger
+  CredenzaTitle as DialogTitle
 } from '@/components/ui/credenza';
 
 import { Turnstile } from '@marsidev/react-turnstile';

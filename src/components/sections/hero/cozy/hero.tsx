@@ -17,7 +17,8 @@ function Hero() {
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
             Hi, I&apos;m <TextReveal>{hero.name}</TextReveal>
           </h1>
-          <p className="max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          <p
+            className="max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             <TextReveal>{hero.description}</TextReveal>
           </p>
         </div>
@@ -26,7 +27,7 @@ function Hero() {
           className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center"
           height="450"
           sizes="100vw"
-          src={'/images/hero.jpg'}
+          src={'/images/hero.png'}
           width="800"
           priority
         />

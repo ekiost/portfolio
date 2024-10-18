@@ -10,10 +10,10 @@ type MotionWrapProps = {
 } & MotionProps;
 
 const MotionWrap: React.FC<MotionWrapProps> = ({
-  children,
-  className,
-  ...props
-}) => {
+                                                 children,
+                                                 className,
+                                                 ...props
+                                               }) => {
   return (
     <motion.section
       whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}

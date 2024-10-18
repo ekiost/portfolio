@@ -1,41 +1,33 @@
 import React from 'react';
-import { CardContent, CardFooter, Card } from '@/components/ui/card';
-import { Button, buttonVariants } from '@/components/ui/button';
+import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 
 import Link from 'next/link';
-import Image from 'next/image';
-import { GithubIcon, GlobeIcon, InfoIcon } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 
 import { Project } from '@/types/project';
-
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger
-} from '@/components/ui/tooltip';
 
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import TextReveal from '@/components/motion/text-reveal';
 
-import { AspectRatio } from '@/components/ui/aspect-ratio';
-
 interface ProjectCardProps extends Project {
-  href: string;
-  thumbnail: string;
+  title: string;
+  description?: string;
+  website?: string;
+  github?: string;
+  tags?: Array<{ label: string }>;
   className?: string;
 }
 
 function ProjectCard({
-  title,
-  description,
-  href,
-  thumbnail,
-  tags,
-  className
-}: ProjectCardProps) {
-  // todo: decide either to keep the white as the bg or use a muted color instead like prev versions
+                       title,
+                       description,
+                       website,
+                       github,
+                       tags,
+                       className
+                     }: ProjectCardProps) {
   return (
     <Card
       className={cn(
@@ -45,14 +37,6 @@ function ProjectCard({
     >
       <CardContent className="p-4 md:p-6">
         <div className="grid gap-2">
-          <AspectRatio ratio={16 / 9} className="z-[2] inline-block overflow-hidden rounded-md mb-2">
-            <Image
-              src={thumbnail || '/placeholder.svg'}
-              alt={`Image of ${title}`}
-              fill
-              className="object-cover transition-transform duration-300 hover:scale-105"
-            />
-          </AspectRatio>
           <h3 className="text-xl font-bold">
             <TextReveal>{title}</TextReveal>
           </h3>
@@ -66,27 +50,24 @@ function ProjectCard({
           </div>
         </div>
       </CardContent>
-      <CardFooter className="flex items-center justify-end p-4 md:p-6">
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                variant="ghost"
-                className="z-[2] rounded-md border border-zinc-950/10 dark:border-zinc-50/10"
-                asChild
-              >
-                <Link href={href}>
-                  <InfoIcon />
-                </Link>
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>More Details</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
+      <CardFooter className="flex items-center p-4 justify-around">
+        {website && (
+          <Button asChild>
+            <Link href={website}>
+              <ExternalLink size={16} />
+              <span className="ml-1">View Site</span>
+            </Link>
+          </Button>
+        )}
+        {github && (
+          <Button className="ml-2" asChild>
+            <Link href={github}>
+              <Github size={16} />
+              <span className="ml-1">View Code</span>
+            </Link>
+          </Button>
+        )}
       </CardFooter>
-      <Link href={href} className="z-1 absolute inset-0 block" />
     </Card>
   );
 }

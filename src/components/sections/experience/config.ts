@@ -2,32 +2,16 @@ import { Experience } from '@/types/experience';
 
 const experiences: Experience[] = [
   {
-    name: 'Web Development',
-    duration: '2022 - Present',
-    company: 'Acme Inc',
-    description:
-      'Building beautiful and functional websites using modern web technologies, focusing on performance, accessibility, and SEO-friendly design.'
+    name: 'Admin Support Assistant',
+    duration: 'Jul 2020 - Jun 2022',
+    company: 'Singapore Army',
+    description: `Managed office communications and visitor protocols. Developed VBA scripts to automate data entry processes, reducing manual input time and improving accuracy.`
   },
   {
-    name: 'UI/UX Design',
-    duration: '2021 - 2022',
-    company: 'Creative Designs Ltd',
-    description:
-      'Creating delightful and intuitive user experiences, specializing in responsive design and user-centric methodologies.'
-  },
-  {
-    name: 'Database Management',
-    duration: '2020 - 2022',
-    company: 'DataTech Solutions',
-    description:
-      'Storing and organizing data efficiently, ensuring data integrity, and optimizing database queries for high traffic applications.'
-  },
-  {
-    name: 'Mobile Development',
-    duration: '2019 - 2021',
-    company: 'Innovative Apps Inc',
-    description:
-      'Crafting engaging and scalable apps for smartphones and tablets, focusing on cross-platform development and native performance.'
+    name: 'Project Assistant',
+    duration: 'Apr 2020 - Jun 2020',
+    company: 'Aerise Pte. Ltd.',
+    description: `Developed a Bluetooth mesh system for sensor data collection and smartphone transmission. Assisted in drone maintenance, including building, repairing, and maintaining drones and related components.`
   }
 ];
 

@@ -1,10 +1,9 @@
 'use client';
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
-import { CodeIcon } from 'lucide-react';
 import styles from './style.module.scss';
-import { opacity, background } from './anim';
+import { background, opacity } from './anim';
 import Nav from './nav';
 
 import { metadata as meta } from '@/app/config';

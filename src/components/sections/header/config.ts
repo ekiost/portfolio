@@ -1,30 +1,30 @@
 import { Link } from '@/types/link';
 
-// This is a setting for the compact header
-const linkLimit = 4;
-//
-
 const links: Link[] = [
   {
     title: 'Home',
-    href: '/',
-    thumbnail: 'home.jpg'
+    href: '#home'
   },
   {
     title: 'About',
-    href: '/about',
-    thumbnail: 'about.jpg'
+    href: '#about'
+  },
+  {
+    title: 'Skills',
+    href: '#skills'
   },
   {
     title: 'Projects',
-    href: '/projects',
-    thumbnail: 'projects.jpg'
+    href: '#projects'
   },
   {
-    title: 'Blog',
-    href: '/blog',
-    thumbnail: 'blog.jpg'
+    title: 'Experience',
+    href: '#experience'
+  },
+  {
+    title: 'Contact',
+    href: '#contact'
   }
 ];
 
-export { linkLimit, links };
+export { links };

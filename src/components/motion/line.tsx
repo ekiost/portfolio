@@ -1,5 +1,5 @@
 'use client';
-import { useRef, useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
 
 interface MouseEvent {
@@ -8,9 +8,9 @@ interface MouseEvent {
 }
 
 export default function Line({
-  className,
-  borderColor
-}: {
+                               className,
+                               borderColor
+                             }: {
   className?: string;
   borderColor?: string;
 }) {
@@ -23,10 +23,10 @@ export default function Line({
 
   useEffect(() => {
     setPath(progress);
-  }, []);
+  });
 
   const setPath = (progress: number) => {
-    const width = window.innerWidth * 1;
+    const width = window.innerWidth;
 
     path.current?.setAttributeNS(
       null,

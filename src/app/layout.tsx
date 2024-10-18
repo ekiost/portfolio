@@ -1,9 +1,4 @@
-import type { Metadata } from 'next';
-import {
-  Bricolage_Grotesque,
-  Instrument_Sans,
-  Montserrat
-} from 'next/font/google';
+import { Bricolage_Grotesque } from 'next/font/google';
 import '@/styles/globals.css';
 
 import { Toaster } from '@/components/ui/sonner';
@@ -13,8 +8,8 @@ import Loader from '@/app/loader';
 import Providers from '@/app/providers';
 
 import { createMetadata } from '@/lib/metadata';
+import React from 'react';
 
-// https://iamsteve.me/blog/the-best-ink-trap-typefaces-for-websites
 const bricolage_grotesque = Bricolage_Grotesque({ subsets: ['latin'] });
 
 export const metadata = createMetadata({
@@ -30,19 +25,19 @@ export const metadata = createMetadata({
 });
 
 export default function RootLayout({
-  children
-}: Readonly<{
+                                     children
+                                   }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={bricolage_grotesque.className}>
-        <Providers>
-          <Loader />
-          {children}
-          <Toaster />
-        </Providers>
-      </body>
+    <body className={bricolage_grotesque.className}>
+    <Providers>
+      <Loader />
+      {children}
+      <Toaster />
+    </Providers>
+    </body>
     </html>
   );
 }

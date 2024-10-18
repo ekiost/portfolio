@@ -1,10 +1,5 @@
 import React from 'react';
-import { CardContent, CardFooter, Card } from '@/components/ui/card';
-import { buttonVariants } from '@/components/ui/button';
-
-import Link from 'next/link';
-import Image from 'next/image';
-import { CodeIcon } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
 
 import { Experience } from '@/types/experience';
 
@@ -16,12 +11,12 @@ interface ExperienceCardProps extends Experience {
 }
 
 function ExperienceCard({
-  company,
-  name,
-  duration,
-  description,
-  className
-}: ExperienceCardProps) {
+                          company,
+                          name,
+                          duration,
+                          description,
+                          className
+                        }: ExperienceCardProps) {
   return (
     <Card className={cn('border-none bg-transparent', className)}>
       <CardContent className="p-1">

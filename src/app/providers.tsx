@@ -2,6 +2,7 @@
 
 import { ThemeProvider } from '@/components/theme-provider';
 import { TransitionProvider } from '@/components/transition-provider';
+import React from 'react';
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (

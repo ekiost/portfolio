@@ -2,11 +2,7 @@
 import React from 'react';
 import { buttonVariants } from '@/components/ui/button';
 import MotionWrap from '@/components/motion-wrap';
-
-import ContactForm from './contact-form';
-
 import { contact } from '@/components/sections/contact/config';
-
 import { cn } from '@/lib/utils';
 import TextReveal from '@/components/motion/text-reveal';
 
@@ -20,8 +16,8 @@ function Contact() {
           </h2>
           <p className="max-w-[600px] text-muted-foreground">
             <TextReveal>
-              Have a question or want to work together? Send me a message using
-              the form.
+              If you have any questions or just want to say hi, feel free to
+              reach out to me.
             </TextReveal>
           </p>
         </div>
@@ -58,9 +54,6 @@ function Contact() {
                 ))}
               </div>
             </div>
-          </div>
-          <div className="flex w-full flex-col gap-4 py-3 lg:w-3/4 lg:pr-3">
-            <ContactForm />
           </div>
         </div>
       </div>

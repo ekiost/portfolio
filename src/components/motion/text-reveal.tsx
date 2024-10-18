@@ -3,9 +3,9 @@ import React from 'react';
 import Reveal from '@/components/reveal';
 
 const TextReveal: React.FC<{ children: React.ReactNode; delay?: number }> = ({
-  children,
-  delay = 0.01
-}) => {
+                                                                               children,
+                                                                               delay = 0.01
+                                                                             }) => {
   const processChildren = (child: React.ReactNode): React.ReactNode => {
     if (typeof child === 'string') {
       return child.split(' ').map((word, index) => (

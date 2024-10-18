@@ -9,7 +9,7 @@
 
   .background {
     background-color: hsl(
-      240 10% 3.9%
+                    240 10% 3.9%
     ); // constant color instead of using a css variable
     opacity: 0.5;
     height: 100%;
@@ -28,7 +28,7 @@
     position: relative;
 
     p {
-      margin: 0px;
+      margin: 0;
     }
 
     a {

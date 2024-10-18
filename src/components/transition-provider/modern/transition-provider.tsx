@@ -1,16 +1,16 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import { TransitionRouter } from 'next-transition-router';
 import { cn } from '@/lib/utils';
 
 const TransitionLayer = ({
-  className,
-  custom,
-  duration,
-  delay = 0
-}: {
+                           className,
+                           custom,
+                           duration,
+                           delay = 0
+                         }: {
   className: string;
   custom: number;
   duration: number;
@@ -31,9 +31,9 @@ const TransitionLayer = ({
 );
 
 export function TransitionProvider({
-  children,
-  speed = 1.0
-}: {
+                                     children,
+                                     speed = 1.0
+                                   }: {
   children: React.ReactNode;
   speed?: number;
 }) {
@@ -63,7 +63,8 @@ export function TransitionProvider({
           setIsTransitioning(false);
           next();
         }, transitionTiming);
-        return () => {};
+        return () => {
+        };
       }}
     >
       <div>{children}</div>
