@@ -7,5 +7,10 @@ const nextConfig = {
     serverActions: {
       allowedOrigins: ['localhost:3000']
     }
-  }
+  },
+  output: "export",
+  basePath: "/nextjs-github-pages",
+  images: {
+    unoptimized: true,
+  },
 };
